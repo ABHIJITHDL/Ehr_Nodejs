@@ -16,6 +16,7 @@ const addDoctor = asyncHandler(async (req, res) => {
     const doctor = await Doctor.create({
         name,email,password
     })
+    res.json(doctor);
 });
 
 const getEhrs = asyncHandler(async (req,res)=>{
